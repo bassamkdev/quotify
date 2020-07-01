@@ -1,0 +1,38 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    position: relative;
+    background-color: $color-black;
+    //adjustments for <button> element;
+    border: none;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &--twitter {
+    color: $color-white;
+    &:hover {
+      color: #38a1f3;
+    }
+  }
+  &--main {
+    color: $color-white;
+  }
+}

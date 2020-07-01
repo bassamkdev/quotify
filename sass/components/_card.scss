@@ -1,0 +1,47 @@
+.card {
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    rgba($color-white, 0.5)
+  );
+  width: 75%;
+  border-radius: 2rem;
+  padding: 3rem 4rem;
+  box-shadow: 0 2rem 3rem rgba($color-black, 0.4);
+  text-align: center;
+  @include respond(phone) {
+    width: 100%;
+    margin: auto 1rem;
+  }
+  &__quote {
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    line-height: 6rem;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  &__quote-icon {
+    font-size: 6rem;
+    padding-right: 1rem;
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+  &__author {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  &__button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+}

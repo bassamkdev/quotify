@@ -1,0 +1,10 @@
+.home {
+  background-image: radial-gradient(rgba($color-white, 0.7), transparent),
+    url(../../image/home-background.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

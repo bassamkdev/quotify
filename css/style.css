@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  min-height: 100vh;
+  height: 100vh; }
+  @media (max-width: 37.5em) {
+    body {
+      padding: 0; } }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+.u-text-center {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-large {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-large {
+  margin-top: 10rem !important; }
+
+.home {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.7), transparent), url(../../image/home-background.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card {
+  background-image: linear-gradient(to bottom right, transparent, rgba(255, 255, 255, 0.5));
+  width: 75%;
+  border-radius: 2rem;
+  padding: 3rem 4rem;
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .card {
+      width: 100%;
+      margin: auto 1rem; } }
+  .card__quote {
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    line-height: 6rem; }
+    @media (max-width: 37.5em) {
+      .card__quote {
+        font-size: 2rem; } }
+  .card__quote-icon {
+    font-size: 6rem;
+    padding-right: 1rem; }
+    @media (max-width: 37.5em) {
+      .card__quote-icon {
+        font-size: 3rem; } }
+  .card__author {
+    color: black;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3rem; }
+    @media (max-width: 37.5em) {
+      .card__author {
+        font-size: 2rem; } }
+  .card__button-group {
+    display: flex;
+    justify-content: space-between; }
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  position: relative;
+  background-color: #000;
+  border: none;
+  transition: all 0.3s; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4); }
+
+.btn:active {
+  outline: none;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--twitter {
+  color: #fff; }
+  .btn--twitter:hover {
+    color: #38a1f3; }
+
+.btn--main {
+  color: #fff; }
