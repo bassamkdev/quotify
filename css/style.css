@@ -56,12 +56,17 @@ body {
   align-items: center; }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-image: linear-gradient(to bottom right, transparent, rgba(255, 255, 255, 0.5));
+  min-height: 30rem;
   width: 75%;
   border-radius: 2rem;
   padding: 3rem 4rem;
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
-  text-align: center; }
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4); }
   @media (max-width: 37.5em) {
     .card {
       width: 100%;
@@ -71,10 +76,16 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 3rem;
-    line-height: 6rem; }
+    line-height: 6rem;
+    text-align: center; }
     @media (max-width: 37.5em) {
       .card__quote {
         font-size: 2rem; } }
+    .card__quote--large {
+      font-size: 2rem; }
+      @media (max-width: 37.5em) {
+        .card__quote--large {
+          font-size: 1rem; } }
   .card__quote-icon {
     font-size: 6rem;
     padding-right: 1rem; }
@@ -92,7 +103,23 @@ body {
         font-size: 2rem; } }
   .card__button-group {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0; }
+  .card__retry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    width: 75%;
+    text-align: center; }
+    @media (max-width: 37.5em) {
+      .card__retry {
+        font-size: 2rem; } }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -122,3 +149,28 @@ body {
 
 .btn--main {
   color: #fff; }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .loader__spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #777;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite; }
+    @media (max-width: 37.5em) {
+      .loader__spinner {
+        width: 80px;
+        height: 80px;
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid #777; } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }

@@ -1,14 +1,19 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-image: linear-gradient(
     to bottom right,
     transparent,
     rgba($color-white, 0.5)
   );
+  min-height: 30rem;
   width: 75%;
   border-radius: 2rem;
   padding: 3rem 4rem;
   box-shadow: 0 2rem 3rem rgba($color-black, 0.4);
-  text-align: center;
   @include respond(phone) {
     width: 100%;
     margin: auto 1rem;
@@ -19,8 +24,15 @@
     text-transform: uppercase;
     margin-bottom: 3rem;
     line-height: 6rem;
+    text-align: center;
     @include respond(phone) {
       font-size: 2rem;
+    }
+    &--large {
+      font-size: 2rem;
+      @include respond(phone) {
+        font-size: 1rem;
+      }
     }
   }
   &__quote-icon {
@@ -43,5 +55,23 @@
   &__button-group {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  &__retry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    width: 75%;
+    text-align: center;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 }

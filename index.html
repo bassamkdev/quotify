@@ -18,19 +18,28 @@
   <body>
     <main class="home">
       <div class="card" id="card">
-        <div class="card__quote">
+        <div class="card__quote" id="quote-container">
           <i class="fas fa-quote-left card__quote-icon"></i>
-          <span class="card__quote-text"
-            >so close no matter how far, couldn't be much more from the heart,
-            forever trusting who we are, and nothing else matter</span
-          >
+          <span class="card__quote-text" id="quote">&nbsp; </span>
         </div>
-        <div class="card__author">metallica</div>
+        <div class="card__author" id="author">&nbsp;</div>
         <div class="card__button-group">
-          <a href="#" class="btn btn--twitter" title="twitte this!">
+          <a
+            href="#"
+            id="button-twitter"
+            class="btn btn--twitter"
+            title="twitte this!"
+          >
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="#" class="btn btn--main">new quote</a>
+          <a href="#" class="btn btn--main" id="button-new-quote">new quote</a>
+        </div>
+        <div class="loader" id="loader">
+          <div class="loader__spinner"></div>
+        </div>
+        <div class="card__retry" id="retry" hidden>
+          <i class="fas fa-search"></i>
+          <span>please try again </span>
         </div>
       </div>
     </main>
